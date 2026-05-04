@@ -2,7 +2,8 @@ import { motion } from 'framer-motion'
 import { BadgeCheck } from 'lucide-react'
 import { AnimatedSection } from '../AnimatedSection'
 import { AppDownloadButtons } from '../AppDownloadButtons'
-import { PhoneMockup } from '../PhoneMockup'
+
+const heroAppScreenshot = `${import.meta.env.BASE_URL}hero-app-dashboard.png`
 
 export function HeroSection() {
   return (
@@ -44,12 +45,20 @@ export function HeroSection() {
           </div>
         </div>
         <motion.div
-          className="hero-visual"
+          className="hero-visual hero-app-shot-wrap"
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <PhoneMockup />
+          <img
+            className="hero-app-shot-img"
+            src={heroAppScreenshot}
+            width={472}
+            height={1024}
+            alt="PlasticPay app home screen showing balance, impact stats, weekly goal, and navigation"
+            loading="eager"
+            decoding="async"
+          />
         </motion.div>
       </div>
       <div className="pp-container" style={{ marginTop: 24 }}>
