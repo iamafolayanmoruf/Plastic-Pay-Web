@@ -2,8 +2,7 @@ import { motion } from 'framer-motion'
 import { BadgeCheck } from 'lucide-react'
 import { AnimatedSection } from '../AnimatedSection'
 import { AppDownloadButtons } from '../AppDownloadButtons'
-
-const heroAppScreenshot = `${import.meta.env.BASE_URL}hero-app-dashboard.png`
+import heroAppScreenshot from '../../assets/hero-app-dashboard.png'
 
 export function HeroSection() {
   return (
